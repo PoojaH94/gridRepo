@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Blog</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .grid-container {
+            display: grid;
+            height: 100vh;
+         grid-template-columns: 1fr 150px;
+         grid-template-rows: auto auto 1fr auto;
+         grid-template-areas:"title title"   
+         "menu sidebar"
+         "content sidebar"
+         "footer footer"
+         
+        }
+        .item1 {
+            background-color: #069;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            padding: 10px;
+            grid-area: title;
+
+        }
+        .item2 {
+            background-color: #069;
+            color: white;
+            padding: 10px;
+            border-top: 1px solid black;
+            grid-area: menu;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .item2 a{
+            
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            flex: 0 1 250px;
+            align-self: center;
+            
+            
+        
+        }
+        .item3{
+            grid-area: content;
+        }
+        .item4{
+            background-color: #024;
+            padding: 5px;
+            color: white;
+            grid-area: sidebar;
+
+        }
+        .item5 {
+            background-color: #069;
+            color: white;
+            text-align: center;
+            grid-area: footer;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">Title</div>
+        <div class="item2">
+            <a href="#">Home</a>
+             <a href="#">About</a>
+              <a href="#">Contact</a>
+        </div>
+        <div class="item3">
+            <h1>Header</h1> 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit illo voluptas nobis natus corporis quaerat aliquid voluptate voluptates dolorem saepe facilis eos qui culpa sed quos inventore error quisquam, esse doloribus fugiat ab repudiandae ut. Recusandae ea eligendi nobis porro temporibus dicta. Ex iusto animi, itaque ipsam odit quasi ad.</p>
+        </div>
+        <div class="item4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ratione illum, quam aliquid consectetur accusantium quidem eum saepe pariatur necessitatibus perferendis odio voluptatem consequuntur sunt.
+        </div>
+        <div class="item5">
+            ClosingNotes
+        </div>
+    </div>
+
+</body>
+</html>
